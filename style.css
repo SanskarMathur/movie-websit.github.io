@@ -1,0 +1,288 @@
+*{border: 0px; margin: 0px; padding: 0px;}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar{
+    font-family: 'Sen', sans-serif;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.navbar-container{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    padding: 0px 50px;
+    height: 100%;
+    color: white;
+}
+
+.logo-container{
+    flex: 1;
+}
+
+.logo{
+    color: #4dbf00;
+    font-size: 30px;
+}
+
+.menu-container{
+    flex: 6;
+}
+
+.menu-list{
+    display: flex;
+    list-style: none;
+}
+
+.menu-list .active{
+    font-weight: bold;
+}
+
+.menu-list-items{
+    margin: 25px;
+}
+
+.menu-list-items:hover{
+    transition: 0.1s ease-in-out;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.profile-container{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profile-text-container{
+    margin: 0px 20px;
+
+}
+
+.toggle{
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.toggle-icon{
+    color: goldenrod;
+}
+
+.toggle-ball{
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    background-color: black;
+    border-radius: 50%;
+    right: 0.8px;
+    cursor: pointer;
+    transform: translateX(0px);
+    transition: 0.2s ease-in-out;
+}
+
+.profile-picture{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sidebar{
+    width: 50px;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    top: 0%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    align-items: center;
+}
+
+.left-menu-icon{
+    color: white;
+    margin-bottom: 40px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.container{
+    background-color: #151515;
+    min-height: calc(100vh - 50px);
+    color: white;
+}
+
+.content-container{
+    margin-left: 50px;
+}
+
+.featured-content{
+    height: 50vh;
+    padding: 50px;
+}
+
+.featured-title{
+    width: 200px;
+}
+
+.featured-desc{
+    width: 500px;
+    color: lightgray;
+    margin: 30px 0;
+    text-align: justify;
+}
+
+.featured-button{
+    background-color: #4dbf00;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.featured-button:hover{
+    background-color: white;
+    color: black;
+}
+
+.movie-list-container{
+    padding: 0 calc(50px + 20px);
+    padding-right: 20px;
+}
+
+.movie-list-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-list{
+    display: flex;
+    height: 300px;
+    align-items: center;
+    transform: translateX(0px);
+    transition: all 0.5s ease-in-out;
+}
+
+.movie-list-item{
+    margin-right: 30px;
+    position: relative;
+}
+
+.movie-list-item:hover .movie-list-item-img{
+    transform: scale(1.2);
+    margin-right: 30px;
+    margin-left: 30px;
+    opacity: 0.3;
+}
+
+.movie-list-item:hover .movie-list-item-title, .movie-list-item:hover .movie-list-item-desc, .movie-list-item:hover .movie-list-item-button{
+    opacity: 1;
+}
+
+.movie-list-item-img{
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.movie-list-item-title{
+    padding: 0px 10px;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.movie-list-item-desc{
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    width: 230px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.movie-list-item-button{
+    padding: 10px;
+    background-color: #4dbf00;
+    border-radius: 10px;
+    color: white;
+    outline: none;
+    border: none;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.movie-list-item-button:hover{
+    background-color: white;
+    color: black;
+}
+
+.arrow{
+    font-size: 120px;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    color: lightgray;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+/* Light Mode */
+
+.navbar-container.active{
+    background-color: gray;
+    color: black;
+}
+
+.sidebar.active{
+    background-color: gray;
+}
+
+.left-menu-icon.active{
+    color: black;
+}
+
+.movie-list-container.active{
+    background-color: rgb(190, 190, 190);
+    color: black;
+}
+
+.toggle.active{
+    background-color: black;
+}
+
+.toggle-ball.active{
+    background-color: white;
+}
